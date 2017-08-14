@@ -1,0 +1,16 @@
+{
+    "name": "orignx/utility",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nana Kwame",
+            "email": "9naquame@gmail.com"
+        }
+    ],
+    "autoload" : {
+        "psr-4" : { 
+            "orignx\\utility\\": "src/"
+        }
+    }
+}
