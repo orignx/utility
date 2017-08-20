@@ -17,7 +17,7 @@ class Container implements Countable, ArrayAccess
     
     public function offsetSet($offset, $value)
     {
-        ;
+        $this->data[$offset] = $value;
     }
     
     public function offsetGet($offset)
@@ -30,9 +30,9 @@ class Container implements Countable, ArrayAccess
         return array_key_exists($offset, $this->data);
     }
     
-    public function offsetUnset($offset, $value)
+    public function offsetUnset($offset)
     {
-        ;
+        unset($this->data[$offset]);
     }
     
     public function count()
