@@ -3,7 +3,9 @@
 class Container implements Countable, ArrayAccess
 {
     private $type;
+    
     protected $data;
+    protected $counter;
     
     public function __construct($type)
     {
@@ -17,6 +19,9 @@ class Container implements Countable, ArrayAccess
     
     public function offsetSet($offset, $value)
     {
+        if(!$this->offsetExists($offset)) {
+            $this->counter += 1;
+        }
         $this->data[$offset] = $value;
     }
     
@@ -33,10 +38,11 @@ class Container implements Countable, ArrayAccess
     public function offsetUnset($offset)
     {
         unset($this->data[$offset]);
+        $this->counter -= 1;
     }
     
     public function count()
     {
-        ;
+        return $this->counter;
     }
 }
