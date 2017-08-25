@@ -1,5 +1,7 @@
 <?php
 
+namespace orginx\utility\object;
+
 class Text
 {
     private $value;

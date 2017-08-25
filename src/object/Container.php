@@ -1,5 +1,7 @@
 <?php
 
+namespace orginx\utility\object;
+
 class Container implements Countable, ArrayAccess
 {
     private $type;
@@ -12,7 +14,7 @@ class Container implements Countable, ArrayAccess
         $this->type =  $type;
     }
     
-    public function getType($type)
+    public function getType()
     {
         $this->type;
     }
