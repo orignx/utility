@@ -1,17 +1,18 @@
 <?php
 
-namespace orginx\utility\object;
+namespace orignx\utility\object;
 
-class Container implements Countable, ArrayAccess
+class Container implements \Countable, \ArrayAccess
 {
     private $type;
     
-    protected $data;
+    public $data;
     protected $counter;
     
     public function __construct($type)
     {
         $this->type =  $type;
+        $this->data = [];
     }
     
     public function getType()
