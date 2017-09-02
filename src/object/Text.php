@@ -1,6 +1,6 @@
 <?php
 
-namespace orginx\utility\object;
+namespace orignx\utility\object;
 
 class Text
 {
